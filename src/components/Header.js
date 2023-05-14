@@ -1,30 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Food from "../assets/Food.jpg";
-import "./Header.css";
+import yellow_brand from '../Assets/yellow_brand.png'
+import {memo} from 'react';
 
-const Header = () => {
-  return (
-    <header>
-      <div className="left-side">
-        <h1>Little Lemon</h1>
-        <h2>Chicago</h2>
-        <p>
-          We are a family owned Mediterranean restaurant, focused on traditional
-          recipes served with a modern twist.
-        </p>
-        <button>
-          <Link to="/booking">Reserve a table</Link>
-        </button>
-      </div>
-      <div className="right-side">
-        <img
-          src={Food}
-          alt="our cook holding a tablet with delicoues baguettes"
-        />
-      </div>
-    </header>
-  );
-};
+function Header(){
+    return(
+        <header className='d-flex justify-content-center py-3'>
+            <img  src ={yellow_brand} alt="logo"/>
+        </header>
+    );
+}
 
-export default Header;
+export default memo(Header);
